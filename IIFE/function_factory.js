@@ -1,6 +1,6 @@
-console.log("~~~~~~~~   function factory   ~~~~~~~~")
-
 function functionFactoryContainScope() {
+
+console.log("~~~~~~~~   function factory   ~~~~~~~~")
 
     //function factory = function that uses iifes to create functions
     

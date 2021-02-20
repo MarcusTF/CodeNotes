@@ -1,9 +1,14 @@
 function reduceContainScope() {
-
     console.log("~~~~~~~~   .reduce   ~~~~~~~~")
 
+    /*
+    The .reduce function takes an array and applies a function to each item in the array, then saves the result and uses it in the next iteration of the process.
+    So for array [1,2,3], you can have reduce sum the numbers to get, and get 6.
+    */
+
+
     const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    const reducedArray = array.reduce((accumulator, arrayItem) => accumulator + arrayItem, 0)
+    const reducedArray = array.reduce((accumulator, arrayItem) => accumulator + arrayItem)
     //console.log(reducedArray)
 
 

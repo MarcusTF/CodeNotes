@@ -1,8 +1,6 @@
 function iifeContainScope() {
 
-    
     console.log("~~~~~~~~   iife   ~~~~~~~~")
-    
     
     //iife = Immmediately Invoked Function Expression
     
@@ -13,7 +11,7 @@ function iifeContainScope() {
         function (parameter) {                                      //declaration of function with parameter
             return parameter * parameter                            //multiply parameter times itself
         }
-        ) /*wrap whole thing in parenthesis*/(2)                        //immediately invoke with the number 2
+        ) /*wrap whole thing in parenthesis*/(2)                    //immediately invoke with the number 2
         
         
         
