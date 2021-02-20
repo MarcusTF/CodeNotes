@@ -11,7 +11,7 @@ function promiseAllContainScope() {
         promise2 = new Promise((resolve, reject) => {               //promise 2 waits 3000ms, then resolves.
             setTimeout(() => resolve('I <3 Promises'), 3000)
         }),
-        promise3 = new Promise((resolve, reject) => {               //finally, promie 3 resolves after 5500ms.
+        promise3 = new Promise((resolve, reject) => {               //finally, promise 3 resolves after 5500ms.
             setTimeout(() => resolve('Promise.all rules!'), 5500)
         })
     ]).then((result) => {                                           //after the last promise finishes, the .then will run for ALL of the promises.
