@@ -18,6 +18,9 @@ function promiseAllContainScope() {
         console.log("~~~~~~~~   promise.all   ~~~~~~~~")
         console.log("All Promises Have Completed! YAY!")
         console.log(result)
+        console.log(result[0])
+        console.log(result[1])
+        console.log(result[2])
     })
 
 }
