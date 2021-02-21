@@ -4,4 +4,4 @@ These are my notes that I've written while trying to learn code. I decided t try
 
 If you set up an local server, run everything, and check the console, everything logged there is organized into sections.
 
-I also went ahead and just put each file into its own function to contain the scope of variable names and such that conflict between notes.
+I also went ahead and just put each file into its own function to contain the scope of variable names and such that might conflict between notes so that they can all run at the same time.
