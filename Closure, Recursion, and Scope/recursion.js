@@ -1,5 +1,5 @@
 function recursionContainScope(){
-    console.log("~~~~~~~~   recursion   ~~~~~~~~")
+    isChrome ? console.log("%cRecursion","font-size: 20px; font-family:sans-serif") : console.log("------------recursion------------")
 
 
 

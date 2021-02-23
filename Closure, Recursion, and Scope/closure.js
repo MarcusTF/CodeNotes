@@ -1,5 +1,5 @@
 function closureContainScope() {
-    console.log("~~~~~~~~   closure   ~~~~~~~~")
+    isChrome ? console.log("%cClosure","font-size: 20px; font-family:sans-serif") : console.log("------------Closure------------")
 
 
     

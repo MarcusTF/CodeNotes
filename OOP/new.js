@@ -1,7 +1,6 @@
 const newContainScope = (() => {
 
-    console.log("~~~~~~~~   new  ~~~~~~~~") 
-
+    isChrome ? console.log("%cnew","font-size: 20px; font-family:sans-serif") : console.log("------------new------------")
 
     /**
      * JavaScript handles functions as both objects and functions. For example:

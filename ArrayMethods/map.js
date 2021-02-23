@@ -1,11 +1,12 @@
-function mapContainScope() {
+var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+const mapContainScope = (() => {
 
     /*
     The .map function simply takes an array and applies a function to each item in the array, and then puts the items, in order, into a new array.
     So for array [1,2,3], you can have the map multiply times 2, and get array [2,4,6]
     */
 
-    console.log("~~~~~~~~   .map   ~~~~~~~~")
+   isChrome ? console.log("%c.map","font-size: 20px; font-family:sans-serif") : console.log("------------map------------")
 
 
     const array = [1, 2, 3]
@@ -26,6 +27,28 @@ function mapContainScope() {
     )
 
     console.log(arrayYouWantToMap, nameOfNewMappedArray)
-}
 
-mapContainScope()
+    ///////// "UNDER THE HOOD" /////////
+
+
+    const UNDER_THE_HOOD = (() => {
+        const array = [1, 2, 3]
+
+        const map = (array, callback) => {
+            const output = []
+            for (let i = 0; i < array.length; i++) {
+                output.push(callback(array[i]))
+            }
+            return output
+        }
+
+        const mappedArray = map(array,arrayItem=>arrayItem*2)
+        console.log(array,mappedArray) 
+    })()
+
+
+
+
+
+
+})()

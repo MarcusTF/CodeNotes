@@ -1,6 +1,5 @@
 const classContainScope = (() => {
-    console.log("~~~~~~~~   class  ~~~~~~~~") 
-
+    isChrome ? console.log("%cclass","font-size: 20px; font-family:sans-serif") : console.log("------------class------------")
     /**
      * the "class" keyword further abstracts away the prototypal bond via syntactical
      * sugar.

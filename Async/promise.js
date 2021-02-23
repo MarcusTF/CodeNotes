@@ -1,7 +1,6 @@
 
 function promiseContainScope() {
-    console.log("~~~~~~~~   promise   ~~~~~~~~")
-
+    isChrome ? console.log("%cPromise","font-size: 20px; font-family:sans-serif") : console.log("------------Promise------------")
 
 
     //the parts of a promise are a bit difficult to keep track of due to their asynchronous nature, but I tried to be very descrptive with the names of variables and such.
@@ -9,7 +8,7 @@ function promiseContainScope() {
 
 
     //set whether the promise will be rejected or fulfilled with this boolean
-    let success = false
+    let success = true
 
     const nameOfYourPromise = (                                     //declare a variable and set it equal to a "new Promise()".
         new Promise(                                                //"Promise()" is an object constructor that takes 2 parameters, resolve and reject.
@@ -27,12 +26,12 @@ function promiseContainScope() {
 
     //this function is the callback for if the promise is successful.
     const functionToCallWhenPromiseIsFulfilled = successResultPassedFromResolve => {
-        console.log("~~~~~~~~   promise completion   ~~~~~~~~")
+        isChrome ? console.log("%c - promise completed - ","color: green; font-family:sans-serif") : console.log("PPROMISE COMPLETED")
         console.log(successResultPassedFromResolve, 'Success!', nameOfYourPromise)
     }
     //this function is the callback for if the promise is unsuccessful.
     const funtionToCallWhenPromiseIsRejected = failureResultPassedFromReject => {
-        console.log("~~~~~~~~   promise completion   ~~~~~~~~")
+        isChrome ? console.log("%c - promise completed - ","color: red; font-family:sans-serif") : console.log("PPROMISE COMPLETED")
         console.log(failureResultPassedFromReject, 'Failure.', nameOfYourPromise)
     }
 

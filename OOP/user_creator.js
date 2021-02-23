@@ -1,6 +1,5 @@
 const userCreatorContainScope = (() => {
-    console.log("~~~~~~~~   user creator  ~~~~~~~~")
-
+    isChrome ? console.log("%cuserCreator","font-size: 20px; font-family:sans-serif") : console.log("------------userCreator------------")
     /** 
      * the first solution to the problem of rewriting each user by hand is to just make a
      * function that does it for us. Simple enough.

@@ -1,6 +1,6 @@
 function iifeContainScope() {
 
-    console.log("~~~~~~~~   iife   ~~~~~~~~")
+    isChrome ? console.log("%cIIFE%c (Immediately Invoked Function Expressions)","font-size: 20px; font-family:sans-serif","font-family:sans-serif") : console.log("------------IIFE------------")
     
     //iife = Immmediately Invoked Function Expression
     

@@ -1,6 +1,5 @@
 const objectsContainScope = (() => {
-    console.log("~~~~~~~~   object declaration   ~~~~~~~~")
-
+    isChrome ? console.log("%cObjects","font-size: 20px; font-family:sans-serif") : console.log("------------Objects------------")
     //declaring an object
     /*  
         each version is contained in a function to contain its scope so that the

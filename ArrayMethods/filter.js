@@ -1,5 +1,5 @@
-console.log("~~~~~~~~   .filter   ~~~~~~~~")
-function filterContainScope() {
+const filterContainScope = (() => {
+    isChrome ? console.log("%c.filter","font-size: 20px; font-family:sans-serif") : console.log("------------filter------------")
 
 
     /*
@@ -25,7 +25,28 @@ function filterContainScope() {
     )
     console.log(arrayYouWantToFilter, nameOfNewFilteredArray)
 
+    const UNDER_THE_HOOD = (() => {
+
+        const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+        const filter = (array, callback) => {
+            const output = []
+            for (let i = 0; i < array.length; i++) {
+                if (callback(array[i])) {
+                    output.push(array[i])
+                }
+            }
+            return output
+        }
+
+        const divisibleByTwo = num => num % 2 === 0
+
+        const filteredArray = filter(array, divisibleByTwo)
+
+        console.log(filteredArray)
 
 
-}
-filterContainScope()
+    })()
+
+
+})()

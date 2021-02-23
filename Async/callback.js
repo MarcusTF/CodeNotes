@@ -1,5 +1,5 @@
 function callbackContainScope() {
-    console.log("~~~~~~~~   callback   ~~~~~~~~")
+    isChrome ? console.log("%cCallbacks","font-size: 20px; font-family:sans-serif") : console.log("------------Callbacks------------")
 
     const callback = parameter => parameter
     const mainFuntion = (parameterA, parameterB, callback) => console.log(parameterA, callback(parameterB))

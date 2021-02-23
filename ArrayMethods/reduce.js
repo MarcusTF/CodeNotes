@@ -1,5 +1,5 @@
 function reduceContainScope() {
-    console.log("~~~~~~~~   .reduce   ~~~~~~~~")
+    isChrome ? console.log("%c.reduce","font-size: 20px; font-family:sans-serif") : console.log("------------reduce------------")
 
     /*
     The .reduce function takes an array and applies a function to each item in the array, then saves the result and uses it in the next iteration of the process.
@@ -32,6 +32,59 @@ function reduceContainScope() {
     console.log(arrayYouWantToReduce, '\n', nameOfNewReducedValue)
 
 
+    const UNDER_THE_HOOD_AS_FUNCTION = (() => {
+
+        const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+        const reduce = (array, callback, defaultValue) => {
+            let accumulator
+            let start = 0
+            if (defaultValue) {
+                accumulator = defaultValue
+            } else {
+                accumulator = array[0]
+                start = 1
+            }
+            for (let i = start; i < array.length; i++) {
+                accumulator = callback(accumulator,array[i],i,array)
+            }
+            return accumulator
+        }
+
+        const add = (accumulator, arrayItem) => accumulator + arrayItem
+
+        const reducedArray = reduce(array, add)
+
+        console.log(reducedArray)   
+        
+    })()
+    
+    const UNDER_THE_HOOD = (() => {
+
+        const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+        Array.prototype.reduce = function(callback, defaultValue) {
+            let accumulator
+            let start = 0
+            if (defaultValue) {
+                accumulator = defaultValue
+            } else {
+                accumulator = this[0]
+                start = 1
+            }
+            for (let i = start; i < this.length; i++) {
+                accumulator = callback(accumulator,this[i],i,this)
+            }
+            return accumulator
+        }
+
+        const add = (accumulator, arrayItem) => accumulator + arrayItem
+
+        const reducedArray = array.reduce(add)
+
+        console.log(reducedArray)   
+        
+    })()
 
 
 
@@ -39,3 +92,5 @@ function reduceContainScope() {
 
 }
 reduceContainScope()
+
+//?

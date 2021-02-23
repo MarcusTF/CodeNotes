@@ -1,6 +1,5 @@
 const protoContainScope = (() => {
-    console.log("~~~~~~~~   __proto__  ~~~~~~~~")
-
+    isChrome ? console.log("%c__proto__","font-size: 20px; font-family:sans-serif") : console.log("------------__proto__------------")
 
 
     function userCreator(name, score) {                     // we make a function called userCreator that has 2 parameters, name and score.

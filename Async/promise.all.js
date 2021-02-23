@@ -15,7 +15,7 @@ function promiseAllContainScope() {
             setTimeout(() => resolve('Promise.all rules!'), 5500)
         })
     ]).then((result) => {                                           //after the last promise finishes, the .then will run for ALL of the promises.
-        console.log("~~~~~~~~   promise.all   ~~~~~~~~")
+        isChrome ? console.log("%cPromise.all","font-size: 20px; font-family:sans-serif") : console.log("------------Promise.all------------")
         console.log("All Promises Have Completed! YAY!")
         console.log(result)
         console.log(result[0])
