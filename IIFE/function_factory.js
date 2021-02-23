@@ -1,7 +1,6 @@
 function functionFactoryContainScope() {
 
-console.log("~~~~~~~~   function factory   ~~~~~~~~")
-
+    isChrome ? console.log("%cFunction Factory","font-size: 20px; font-family:sans-serif") : console.log("------------Function Factory------------")
     //function factory = function that uses iifes to create functions
     
     const functionFactory = num => (n => n * n)(num)                    //streamlined arrow function version
